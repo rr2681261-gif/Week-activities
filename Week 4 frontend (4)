@@ -1,0 +1,104 @@
+
+let name = "Arun";   
+let age = 20;        
+const PI = 3.14;     
+console.log("Name:", name, " Age:", age, " PI:", PI);
+
+
+let num = 25;                     
+let str = "Hello";                
+let arr = [1, 2, 3];              
+let obj = { name: "Kavi" };       
+console.log("Number:", num, " String:", str, " Array:", arr, " Object:", obj);
+
+
+let a = 10, b = 5;
+console.log("Addition:", a + b);          
+console.log("Comparison (a > b):", a > b); 
+console.log("Strict Equal (a === '10'):", a === "10"); 
+
+
+function greet(userName) {
+  return "Hello, " + userName;
+}
+console.log(greet("Priya"));
+
+
+let marks = 75;
+if (marks >= 90) {
+  console.log("Grade A");
+} else if (marks >= 75) {
+  console.log("Grade B");
+} else {
+  console.log("Grade C");
+}
+
+
+
+// For loop
+for (let i = 1; i <= 5; i++) {
+  console.log("For loop:", i);
+}
+
+// While loop
+let j = 1;
+while (j <= 5) {
+  console.log("While loop:", j);
+  j++;
+}
+
+// Do-While loop
+let vip = 1;
+do {
+  console.log("Do-While loop:", vip);
+  vip++;
+} while (vip <= 5);
+
+// For…in (Object)
+let student = { name: "Arun", age: 20 };
+for (let key in student) {
+  console.log("For-in:", key, "->", student[key]);
+}
+
+// For…of (Array)
+let numbers = [10, 20, 30];
+for (let value of numbers) {
+  console.log("For-of:", value);
+}
+
+// Print even numbers (1–10)
+for (let i = 1; i <= 10; i++) {
+  if (i % 2 === 0) {
+    console.log("Even number:", i);
+  }
+}
+
+
+document.getElementById("heading").style.color = "red";
+document.querySelector("h1").style.backgroundColor = "lightblue";
+
+
+document.getElementById("btn").addEventListener("click", function () {
+  alert("Button was clicked!");
+  document.getElementById("heading").innerText = "Welcome to JavaScript!";
+});
+
+
+
+// By class name
+let classItems = document.getElementsByClassName("mandatory");
+console.log("getElementsByClassName:", classItems);
+
+// By tag name
+let headings = document.getElementsByTagName("h1");
+console.log("getElementsByTagName:", headings);
+
+// By querySelectorAll
+let mandatoryItems = document.querySelectorAll("li.mandatory");
+console.log("querySelectorAll:", mandatoryItems);
+
+// Example: change style for all selected elements
+for (let item of mandatoryItems) {
+  item.style.color = "blue";
+  item.style.fontWeight = "bold";
+}
