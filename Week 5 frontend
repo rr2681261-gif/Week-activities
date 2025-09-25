@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Example</title>
+  <!-- Import jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<p id="myPara">This is a paragraph</p>
+<button id="btn">Click Me</button>
+
+<script>
+  $(document).ready(function(){
+    $("#btn").click(function(){
+      $("#myPara").hide();  // Hides the paragraph
+    });
+  });
+</script>
+
+</body>
+</html>   
+
+//Closures & Modules
+import { add, multiply } from './math.js';
+
+console.log(add(2, 3));       // 5
+console.log(multiply(4, 5));  // 20
+
+// Modules
+export function add(a, b) {
+  return a + b;
+}
+
+export function multiply(a, b) {
+  return a * b;
+}
+
+/*JavaScript Array*/
+let fruits = ["apple", "banana", "cherry"];
+console.log(fruits[1]);   // banana
+
+fruits.push("grape");     // add new item
+console.log(fruits);
+
+// Print length
+console.log("Length of array:", fruits.length);
+
+// Print index of a value
+console.log("Index of cherry:", fruits.indexOf("cherry"));
+console.log("Index of banana:", fruits.indexOf("banana"));
+
+/*output
+banana
+[ 'apple', 'banana', 'cherry', 'grape' ]
+Length of array: 4
+Index of cherry: 2
+Index of banana: 1
+*/
+
+
+/*Object*/
+
+let student = {
+  name: "Arun",
+  age: 21,
+  course: "Computer Science"
+};
+
+console.log(student.name);   // Arun
+console.log(student["age"]); // 21
+
+// scope
+function test() {
+  if (true) {
+    var x = 5;    // function scope
+    let y = 10;   // block scope
+    const z = 15; // block scope
+  }
+
+  console.log(x); // 5  (var function scope)
+  console.log(y); // ReferenceError (block scope)
+  console.log(z); // ReferenceError (block scope)
+}
+
+test();
+//scope
+function test() {
+  if (true) {
+    let y = 10;     // block scope
+    const z = 15;   // block scope
+
+    console.log("Inside Block - y:", y);  //  10
+    console.log("Inside Block - z:", z);  // 15
+  }
+}
+
+test();
+
+
+//Closures & Modules
+function outer() {
+  let count = 0;  // outer variable
+
+  function inner() {
+    count++;
+    return count;
+  }
+
+  return inner; // returning inner function
+}
+
+let counter = outer();  
+
+console.log(counter()); // 1
+console.log(counter()); // 2
+console.log(counter()); // 3
+
+
