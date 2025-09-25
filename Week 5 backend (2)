@@ -1,0 +1,26 @@
+/*  Install Nodemailer
+npm install nodemailer */
+
+
+/*Import Nodemailer*/
+const nodemailer = require('nodemailer');
+
+/*Create Transporter*/
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: { user: 'your_email@gmail.com', pass: 'your_app_password' }
+});
+
+/*Define Email Details*/
+const mailOptions = {
+  from: 'your_email@gmail.com',
+  to: 'student@example.com',
+  subject: 'Test Email',
+  text: 'Hello from Nodemailer!'
+};
+
+/*Send Email*/
+transporter.sendMail(mailOptions, (error, info) => {
+  if (error) return console.log(error);
+  console.log('Email sent:', info.response);
+});
