@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Example</title>
+</head>
+<body>
+  <h1 id="heading">Hello Students</h1>
+
+  <!-- Button Example -->
+  <button id="btn">Click Me</button>
+
+  <!-- Sample List -->
+  <ul>
+    <li class="mandatory">CSE</li>
+    <li class="mandatory">IT</li>
+    <li>AI&DS</li>
+  </ul>
+
+  <!-- Link external JS file -->
+  <script src="index.js"></script>
+</body>
+</html>
